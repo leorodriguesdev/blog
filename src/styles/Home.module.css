@@ -1,20 +1,60 @@
 /* src/styles/Home.module.css */
+
 .container {
-  padding: 20px;
   max-width: 800px;
   margin: 0 auto;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.post {
+  font-size: 2.5em;
+  text-align: center;
 }
 
 .list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
   list-style: none;
   padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
+
 }
 
 .listItem {
   margin: 10px 0;
+  width: 45%;
+  min-width: 300px;
+
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  overflow: hidden;
+
+  text-decoration: none;
+  color: #333;
+}
+
+.listItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.3s ease;
 }
 
 .image {
@@ -22,4 +62,30 @@
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.postImage {
+  display: block;
+  margin: 0 auto 10px; /* Centraliza a imagem e adiciona espaço abaixo */
+}
+
+.postName {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  text-align: center;
+
+  color: #333;
+
+  text-decoration: none;
+  text-transform: capitalize;
+  
+}
+
+.folderName {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+
+  text-decoration: none;
+  text-transform: capitalize;
 }

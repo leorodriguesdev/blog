@@ -1,5 +1,8 @@
 import { fetchPosts } from '../../lib/fetchContent';
 import styles from '../../styles/Post.module.css';
+import dynamic from 'next/dynamic';
+
+const CodeBlock = dynamic(() => import('../../components/CodeBlock'), { ssr: false });
 
 export default function Post({ post }) {
   return (

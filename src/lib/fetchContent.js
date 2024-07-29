@@ -14,7 +14,6 @@ async function fetchMarkdownFiles(path = '') {
     },
   });
   const files = await res.json();
-  console.log('Fetched Files:', files);
   
   return files.filter(file => file.name.endsWith('.md'));
 }
@@ -26,7 +25,6 @@ export async function fetchPosts() {
     },
   });
   const folderList = await res.json();
-  console.log('Fetched Folders:', folderList);
 
   const allPosts = [];
 
@@ -46,6 +44,7 @@ export async function fetchPosts() {
 
         allPosts.push({
           id: post.name.replace(/\.md$/, ''),
+          folder: folder.name, // Adiciona o nome da pasta
           contentHtml,
           ...data,
         });
@@ -53,6 +52,5 @@ export async function fetchPosts() {
     }
   }
 
-  console.log('All Posts:', allPosts);
   return allPosts;
 }
