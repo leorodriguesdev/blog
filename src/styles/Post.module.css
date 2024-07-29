@@ -1,23 +1,25 @@
 /* src/styles/Post.module.css */
 .container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .title {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .content {
-    line-height: 1.6;
-  }
-  
-  .image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
-  }
-  
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  line-height: 1.6;
+}
+
+.postTitle {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.image {
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

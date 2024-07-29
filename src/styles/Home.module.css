@@ -3,6 +3,9 @@
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .list {
@@ -12,4 +15,11 @@
 
 .listItem {
   margin: 10px 0;
+}
+
+.image {
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

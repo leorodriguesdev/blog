@@ -1,11 +1,10 @@
-// src/pages/posts/[id].js
 import { fetchPosts } from '../../lib/fetchContent';
 import styles from '../../styles/Post.module.css';
 
 export default function Post({ post }) {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{post.title}</h1>
+      <h1 className={styles.postTitle}>{post.title}</h1>
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}

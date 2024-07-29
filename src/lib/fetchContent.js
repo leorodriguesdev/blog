@@ -39,7 +39,10 @@ export async function fetchPosts() {
         const { data, content } = matter(markdown);
 
         const processedContent = await remark().use(html).process(content);
-        const contentHtml = processedContent.toString();
+        let contentHtml = processedContent.toString();
+
+        // Adiciona a classe "image" a todas as tags <img>
+        contentHtml = contentHtml.replace(/<img /g, '<img style="max-width: 100%; height: auto;" ');
 
         allPosts.push({
           id: post.name.replace(/\.md$/, ''),

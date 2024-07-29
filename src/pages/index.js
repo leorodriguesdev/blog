@@ -3,10 +3,9 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 export default function Home({ posts }) {
-  console.log('Posts:', posts); // Log the posts
   return (
     <div className={styles.container}>
-      <h1>React Blog</h1>
+      <h1>Blog Posts</h1>
       <ul className={styles.list}>
         {posts.map((post) => (
           <li key={post.id} className={styles.listItem}>
