@@ -1,15 +1,3 @@
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.postTitle {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 .content {
   font-size: 1.1em;
   line-height: 1.6;
@@ -24,4 +12,36 @@
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+/* styles/Post.module.css */
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.postTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.code-block {
+  position: relative;
+}
+
+.code-block button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #0070f3;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.code-block button:hover {
+  background: #005bb5;
 }
