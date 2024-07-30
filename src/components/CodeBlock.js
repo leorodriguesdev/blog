@@ -1,25 +1,21 @@
-import React from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import copy from 'copy-to-clipboard';
-import styles from '../styles/CodeBlock.module.css';
+import { useRef } from 'react';
 
 const CodeBlock = ({ language, value }) => {
+  const codeRef = useRef(null);
+
   const handleCopy = () => {
-    copy(value);
-    alert('Código copiado para a área de transferência');
+    navigator.clipboard.writeText(codeRef.current.innerText);
   };
 
   return (
-    <div className={styles.codeBlock}>
-      <button onClick={handleCopy} className={styles.copyButton}>
-        Copiar
-      </button>
-      <SyntaxHighlighter language={language} style={darcula}>
-        {value}
-      </SyntaxHighlighter>
+    <div className="code-block">
+      <pre ref={codeRef}>
+        <code className={`language-${language}`}>{value}</code>
+      </pre>
+      <button onClick={handleCopy}>Copy</button>
     </div>
   );
 };
 
 export default CodeBlock;
+s

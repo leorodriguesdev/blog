@@ -76,8 +76,8 @@
 
   color: #333;
 
-  text-decoration: none;
-  text-transform: capitalize;
+  text-decoration: none !important;
+  text-transform: capitalize !important;
   
 }
 
