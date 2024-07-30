@@ -2,7 +2,7 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: ['raw.githubusercontent.com'],
-    unoptimized: true, // Adicione esta linha
+    unoptimized: true,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -14,5 +14,5 @@ module.exports = {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
   },
   output: 'export',
-  distDir: 'out',
+  distDir: 'out', // O diretório de saída para exportação estática
 };
