@@ -2,12 +2,17 @@ import '../styles/globals.css';
 import Link from 'next/link';
 import 'prismjs/themes/prism-tomorrow.css'; // Estilo PrismJS
 import Image from 'next/image'; // Importar componente Image do Next.js
+import Head from 'next/head'; // Importar o componente Head
 import logoBlog from '../assets/logo.webp'; // Importar a imagem do logo
 import styles from '../styles/MyApp.module.css'; // Importar o novo arquivo de estilos
 
 function MyApp({ Component, pageProps }) {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Blog</title>
+        <link rel="icon" href="../assets/favicon.ico" />
+      </Head>
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <Link href="/" legacyBehavior>
