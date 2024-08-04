@@ -5,6 +5,7 @@ import Image from 'next/image'; // Importar componente Image do Next.js
 import Head from 'next/head'; // Importar o componente Head
 import logoBlog from '../assets/logo.webp'; // Importar a imagem do logo
 import styles from '../styles/MyApp.module.css'; // Importar o novo arquivo de estilos
+import { Analytics } from "@vercel/analytics/react"
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps }) {
       </header>
       <main className={styles.main}>
         <Component {...pageProps} />
+        <Analytics />
       </main>
       <footer className={styles.footer}>
         <p>© 2024 React Blog</p>
