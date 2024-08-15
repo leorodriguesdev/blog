@@ -31,6 +31,11 @@ export default function Home({ posts }) {
       'Estado': 'Estado',
       'Props': 'Props',
       'E': 'é',
+      'Reactnative': 'para o React native',
+      'Diferencas': 'Diferenças',
+      'Useeffect': ', useEffect',
+      'Usecontext': ', useContext',
+      'Usestate': 'useState',
       // Adicione mais correções conforme necessário
     };
 
