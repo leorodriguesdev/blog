@@ -28,7 +28,7 @@ async function fetchMarkdownFiles(path = '') {
     }
 
     const files = await res.json();
-    console.log(`Fetched files: ${JSON.stringify(files)}`);
+    // console.log(`Fetched files: ${JSON.stringify(files)}`);
 
     if (!Array.isArray(files)) {
       throw new Error('Expected files to be an array');
@@ -43,7 +43,7 @@ async function fetchMarkdownFiles(path = '') {
 
 export async function fetchPosts() {
   try {
-    console.log('Fetching folder list');
+    // console.log('Fetching folder list');
     const res = await fetch(BASE_URL, {
       headers: {
         Authorization: `token ${TOKEN}`,
@@ -55,7 +55,7 @@ export async function fetchPosts() {
     }
 
     const folderList = await res.json();
-    console.log(`Fetched folder list: ${JSON.stringify(folderList)}`);
+    // console.log(`Fetched folder list: ${JSON.stringify(folderList)}`);
 
     if (!Array.isArray(folderList)) {
       throw new Error('Expected folder list to be an array');
@@ -95,12 +95,12 @@ export async function fetchPosts() {
             ...data,
           });
 
-          console.log(`Processed post: ${JSON.stringify(allPosts[allPosts.length - 1])}`);
+          // console.log(`Processed post: ${JSON.stringify(allPosts[allPosts.length - 1])}`);
         }
       }
     }
 
-    console.log(`All posts: ${JSON.stringify(allPosts)}`);
+    // console.log(`All posts: ${JSON.stringify(allPosts)}`);
     return allPosts;
   } catch (error) {
     console.error(`Error in fetchPosts: ${error.message}`);
