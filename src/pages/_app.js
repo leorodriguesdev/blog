@@ -3,7 +3,7 @@ import Link from 'next/link';
 import 'prismjs/themes/prism-tomorrow.css'; // Estilo PrismJS
 import Image from 'next/image'; // Importar componente Image do Next.js
 import Head from 'next/head'; // Importar o componente Head
-import logoBlog from '../assets/logo.webp'; // Importar a imagem do logo
+import logoBlog from '../assets/logo.png'; // Importar a imagem do logo
 import styles from '../styles/MyApp.module.css'; // Importar o novo arquivo de estilos
 // import { Analytics } from "@vercel/analytics/react"
 
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
 
             </a>
           </Link>
-          <h3 className={styles.headerTitle}>Blog</h3>
+          <h3 className={styles.headerTitle}>blog</h3>
         </div>
       </header>
       <main className={styles.main}>
