@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 .container {
     display: flex;
@@ -8,13 +7,12 @@
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #0F2443 0%, #1c5370cc 20%, #1C5270cc 80%, #73C5EC 100%);
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.55);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .headerContent {
@@ -22,33 +20,147 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .link {
     display: flex;
+    align-items: center;
     text-decoration: none;
-    color: black;
-    font-family: "Teko", sans-serif;
-
+    color: white;
+    font-family: "Poppins", sans-serif;
 }
 
 .headerTitle {
     margin-left: 10px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.imageProfile {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;  
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 2px solid rgba(255,255,255,0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.imageProfile:hover {
+    transform: scale(2.60);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255,255,255,0.8);
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 60px;
+}
+.nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: rgba(255,255,255,0.8);
 }
 
 .main {
     flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
 .footer {
+    background: linear-gradient(90deg, #0F2443 0%, #1c5370cc 20%, #1C5270cc 80%, #73C5EC 100%);
+    color: white;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    padding-inline: 50px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    z-index: 1000;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer p {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.footerText {
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footerText a {
+    color: white;
+    transition: color 0.3s ease;
+}
+.socialIcons a {
+    color: white;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+    color: rgba(255,255,255,0.8);
+}
+
+@media screen and (max-width: 768px) {
+    .footerContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footerText {
+        margin-bottom: 10px;
+    }
+
+    .socialIcons {
+        margin-top: 10px;
+    }
+
+    .socialIcons a {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .footer p {
+        text-align: center;
+    }
+
+    .headerTitle {
+        font-size: 1.2rem;
+    }
+
+    .nav a {
+        font-size: 0.9rem;
+        margin-right: 10px;
+    }
 }

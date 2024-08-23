@@ -60,7 +60,7 @@ export default function Home({ posts }) {
     <>
       <div className={styles.container}>
         <div className={styles.sidebar}>
-          <h1 className={styles.post}>Tópicos</h1>
+          <h1 className={styles.post}>Tópicos➡️</h1>
           <nav className={styles.nav}>
             <button className={styles.sidebarItem} onClick={() => handleFilterChange('')}>
               🔹Todos
