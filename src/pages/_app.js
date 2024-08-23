@@ -1,11 +1,14 @@
 import '../styles/globals.css';
 import Link from 'next/link';
-import 'prismjs/themes/prism-tomorrow.css'; // Estilo PrismJS
-import Image from 'next/image'; // Importar componente Image do Next.js
-import Head from 'next/head'; // Importar o componente Head
-import logoBlog from '../assets/logo.png'; // Importar a imagem do logo
-import styles from '../styles/MyApp.module.css'; // Importar o novo arquivo de estilos
-// import { Analytics } from "@vercel/analytics/react"
+import 'prismjs/themes/prism-tomorrow.css';
+import Image from 'next/image';
+import Head from 'next/head';
+import logoBlog from '../assets/foto.jpeg';
+import styles from '../styles/MyApp.module.css';
+import { GrInstagram } from "react-icons/gr";
+import { ImFacebook2 } from "react-icons/im";
+import { RxGithubLogo } from "react-icons/rx";
+
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -18,20 +21,27 @@ function MyApp({ Component, pageProps }) {
         <div className={styles.headerContent}>
           <Link href="/" legacyBehavior>
             <a className={styles.link}>
-              <Image src={logoBlog} alt="React Blog Logo" width={60} height={60} />
-              <h3 className={styles.headerTitle}>leorodrigues.dev</h3>
-
+              <Image src={logoBlog} alt="React Blog Logo" className={styles.imageProfile} />
+              <h1 className={styles.headerTitle}>leorodrigues.dev</h1>
             </a>
           </Link>
-          <h3 className={styles.headerTitle}>blog</h3>
+          <nav className={styles.nav}>
+            <Link href="https://bio.link/leorodriguesdev" legacyBehavior><a>Contato</a></Link>
+          </nav>
         </div>
       </header>
       <main className={styles.main}>
         <Component {...pageProps} />
-        {/* <Analytics /> */}
       </main>
       <footer className={styles.footer}>
-        <p>© 2024 React Blog</p>
+        <div className={styles.footerContent}>
+          <p className={styles.footerText}>© 2024 Feito com ☕ + <Link href="https://reactjs.org" legacyBehavior>React</Link> & <Link href="https://nextjs.org" legacyBehavior>Next.js</Link></p>
+          <div className={styles.socialIcons}>
+            <Link href="https://www.instagram.com/leorodriguesdev/" legacyBehavior><a><GrInstagram /></a></Link>
+            <Link href="https://github.com/leorodriguesdev" legacyBehavior><a><RxGithubLogo /></a></Link>
+            <Link href="https://www.linkedin.com/in/leorodriguesdev/" legacyBehavior><a><ImFacebook2 /></a></Link>
+          </div>
+        </div>
       </footer>
     </div>
   );
