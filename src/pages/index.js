@@ -29,10 +29,12 @@ export default function Home({ posts }) {
       '1-instalando-node-npm': 'Instalando Node.js e npm',
       '1-Hooks-useState-useEffect-useContext': 'Hooks: useState, useEffect, useContext',
       '1-diferencas-react-reactnative': 'Diferenças entre React e React Native',
+      '1-navegacao-roteamento': 'Navegação e Roteamento',
       '1-introducao-react': 'Introdução ao React',
       '2-configurando-ambiente-desenvolvimento': 'Configurando o Ambiente de Desenvolvimento',
       '3-conceitos-avancados-react': 'Conceitos Avançados de React',
       '4-introducao-react-native': 'Introdução ao React Native',
+      '5-navegacao-roteamento': 'Navegação e Roteamento',
     };
 
     // Verifica se o texto corresponde a alguma chave e retorna o valor corrigido
@@ -44,38 +46,35 @@ export default function Home({ posts }) {
     return text;
   }
 
-
   // 1-introducao-react
   // 2-configurando-ambiente-desenvolvimento
   // 3-conceitos-avancados-react
   // 4-introducao-react-native
-
-
-  // 1-introducao-react
-  // 2-configurando-ambiente-desenvolvimento
-  // 3-conceitos-avancados-react
-  // 4-introducao-react-native
+  // 5-navegacao-roteamento
 
   return (
     <>
       <div className={styles.container}>
         <div className={styles.sidebar}>
-          <h1 className={styles.post}>Tópicos➡️</h1>
+          <h1 className={styles.post}>Tópicos ➡️</h1>
           <nav className={styles.nav}>
             <button className={styles.sidebarItem} onClick={() => handleFilterChange('')}>
-              🔹Todos
+              🔹 Todos
             </button>
             <button className={styles.sidebarItem} onClick={() => handleFilterChange('1-introducao-react')}>
-              🔹Introdução ao React
+              🔹 Introdução ao React
             </button>
             <button className={styles.sidebarItem} onClick={() => handleFilterChange('2-configurando-ambiente-desenvolvimento')}>
-            🔹Configurando o Ambiente de Desenvolvimento
+              🔹 Configurando o Ambiente de Desenvolvimento
             </button>
             <button className={styles.sidebarItem} onClick={() => handleFilterChange('3-conceitos-avancados-react')}>
-            🔹Conceitos Avançados de React
+              🔹 Conceitos Avançados de React
             </button>
             <button className={styles.sidebarItem} onClick={() => handleFilterChange('4-introducao-react-native')}>
-            🔹Introdução ao React Native
+              🔹 Introdução ao React Native
+            </button>
+            <button className={styles.sidebarItem} onClick={() => handleFilterChange('5-navegacao-roteamento')}>
+              🔹 Navegação e Roteamento
             </button>
           </nav>
         </div>

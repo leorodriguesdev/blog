@@ -6,7 +6,7 @@ import Head from 'next/head';
 import logoBlog from '../assets/foto.jpeg';
 import styles from '../styles/MyApp.module.css';
 import { GrInstagram } from "react-icons/gr";
-import { ImFacebook2 } from "react-icons/im";
+import { IoLogoLinkedin } from "react-icons/io5";
 import { RxGithubLogo } from "react-icons/rx";
 
 
@@ -37,9 +37,9 @@ function MyApp({ Component, pageProps }) {
         <div className={styles.footerContent}>
           <p className={styles.footerText}>© 2024 Feito com ☕ + <Link href="https://reactjs.org" legacyBehavior>React</Link> & <Link href="https://nextjs.org" legacyBehavior>Next.js</Link></p>
           <div className={styles.socialIcons}>
-            <Link href="https://www.instagram.com/leorodriguesdev/" legacyBehavior><a><GrInstagram /></a></Link>
-            <Link href="https://github.com/leorodriguesdev" legacyBehavior><a><RxGithubLogo /></a></Link>
-            <Link href="https://www.linkedin.com/in/leorodriguesdev/" legacyBehavior><a><ImFacebook2 /></a></Link>
+            <Link href="https://www.instagram.com/leorodriguesdev/" legacyBehavior><a><GrInstagram size={20} /></a></Link>
+            <Link href="https://github.com/leorodriguesdev" legacyBehavior><a><RxGithubLogo size={20} /></a></Link>
+            <Link href="https://www.linkedin.com/in/leorodriguesdev/" legacyBehavior><a><IoLogoLinkedin size={20} /></a></Link>
           </div>
         </div>
       </footer>
